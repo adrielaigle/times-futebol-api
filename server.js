@@ -17,6 +17,23 @@ app.get('/api/times', (req, res) => {
   res.status(200).json(times);
 });
 
+app.post('/api/times', (req, res) => {
+  const { nome, pais, liga, titulosLibertadores, titulosChampions } = req.body;
+  
+  const novoTime = {
+    id: times.length + 1,
+    nome,
+    pais,
+    liga,
+    ...(titulosLibertadores !== undefined && { titulosLibertadores }),
+    ...(titulosChampions !== undefined && { titulosChampions })
+  };
+
+  times.push(novoTime);
+  res.status(201).json(novoTime);
+});
+
+
 app.listen(PORT, () => {
   console.log(`Servidor rodando em http://localhost:${PORT}/api/times`);
 });
