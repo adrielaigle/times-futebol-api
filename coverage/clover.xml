@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1789171532890" clover="3.2.0">
+  <project timestamp="1789171532892" name="All files">
+    <metrics statements="20" coveredstatements="18" conditionals="6" coveredconditionals="4" methods="5" coveredmethods="4" elements="31" coveredelements="26" complexity="0" loc="20" ncloc="20" packages="1" files="1" classes="1"/>
+    <file name="server.js" path="C:\Users\Meu Pc\OneDrive\Documentos\Programação\Projetos\Times\server.js">
+      <metrics statements="20" coveredstatements="18" conditionals="6" coveredconditionals="4" methods="5" coveredmethods="4"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="2" count="1" type="stmt"/>
+      <line num="3" count="1" type="stmt"/>
+      <line num="5" count="1" type="stmt"/>
+      <line num="7" count="1" type="stmt"/>
+      <line num="8" count="1" type="stmt"/>
+      <line num="11" count="1" type="stmt"/>
+      <line num="16" count="1" type="stmt"/>
+      <line num="17" count="1" type="stmt"/>
+      <line num="20" count="1" type="stmt"/>
+      <line num="21" count="1" type="stmt"/>
+      <line num="23" count="1" type="stmt"/>
+      <line num="32" count="1" type="stmt"/>
+      <line num="33" count="1" type="stmt"/>
+      <line num="37" count="1" type="stmt"/>
+      <line num="38" count="1" type="stmt"/>
+      <line num="41" count="1" type="cond" truecount="1" falsecount="1"/>
+      <line num="42" count="0" type="stmt"/>
+      <line num="43" count="0" type="stmt"/>
+      <line num="47" count="1" type="stmt"/>
+    </file>
+  </project>
+</coverage>

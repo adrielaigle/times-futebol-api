@@ -1,0 +1,30 @@
+name: CI - Eventos de Pull Request
+
+on:
+  pull_request:
+    branches:
+      - main
+    types: [opened, synchronize, reopened]
+
+jobs:
+  pr-validation:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Clona o repositório e altera para a branch específica do Pull Request
+      - name: Checkout do Repositório
+        uses: actions/checkout@v4
+
+      # 2. Instala o interpretador Node.js
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      # 3. Instala as dependências do projeto
+      - name: Instalar Dependências
+        run: npm ci
+
+      # 4. Executa os testes e garante 90% de cobertura
+      - name: Executar Testes de Cobertura para PR
+        run: npm test

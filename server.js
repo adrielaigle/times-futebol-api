@@ -37,3 +37,11 @@ app.post('/api/times', (req, res) => {
 app.listen(PORT, () => {
   console.log(`Servidor rodando em http://localhost:${PORT}/api/times`);
 });
+
+if (process.env.NODE_ENV !== 'test') {
+  app.listen(PORT, () => {
+    console.log(`Servidor rodando em http://localhost:${PORT}/api/times`);
+  });
+}
+
+module.exports = app;

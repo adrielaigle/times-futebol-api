@@ -1,0 +1,30 @@
+name: CI - Eventos de Commit
+
+on:
+  push:
+    branches:
+      - main
+      - 'feature/**'
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Clona o repositório e altera para a branch específica do evento
+      - name: Checkout do Repositório
+        uses: actions/checkout@v4
+
+      # 2. Instala o interpretador Node.js
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      # 3. Instala as dependências do projeto
+      - name: Instalar Dependências
+        run: npm ci
+
+      # 4. Executa os testes e garante 90% de cobertura
+      - name: Executar Testes e Validar Cobertura
+        run: npm test
